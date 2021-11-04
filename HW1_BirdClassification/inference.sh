@@ -1,0 +1,11 @@
+python -m torch.distributed.launch --nproc_per_node=1 inference.py \
+--img_order 'testing_img_order.txt' \
+--output 'answer-transFGv8_linear_Vitl32pre-20000e_batch6.txt' \
+--annotation_file 'training_labels.txt' \
+--img_testdir '/path_to_testing_images' \
+--eval_batch_size 6 \
+--dataset 'myBirds' \
+--trained_model '/path/to_trainedmodel' \
+--local_rank 0 \
+--pretrained_dir "vitpretrainedmodel_path/imagenet21k+imagenet2012_ViT-L_32.npz" \
+--model_type "ViT-L_32"
