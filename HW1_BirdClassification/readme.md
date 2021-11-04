@@ -5,7 +5,8 @@ The assignment was to classify 200 bird species, and the challenge is we only ha
 On the other hand, on the bird cases the fine-grained nature make they have a quite similar visual. The fine grained image classification technique is usually used to tackle this issue. For bird classification, I tried one of fine grained image classification technique called TransFG: A Transformer Architecture for Fine-grained Recognition. The model was developed by inspired with visual transformer by integrate all raw attention weights of the
 transformer into an attention map. This method was successfully distinguish 200 species with accuracy
 0.87207. \
-Get the report in this [drive](https://reurl.cc/aNR1VD)
+\
+**Get the report in this [drive](https://reurl.cc/aNR1VD).**
 ## Dependencies
   - Python 3.8.8
   - PyTorch 1.9.0
@@ -30,7 +31,7 @@ Get the report in this [drive](https://reurl.cc/aNR1VD)
       --img_order 'data_file/testing_img_order.txt' \
       --output 'answer-transFGv8_linear_Vitl32pre-20000e_batch6.txt' \
       --annotation_file 'data_file/training_labels.txt' \
-      --img_testdir '**/path_to_testing_images**' \
+      --img_testdir ' **/path_to_testing_images** ' \
       --eval_batch_size 6 \
       --dataset 'myBirds' \
       --trained_model '**/path/to_trainedmodel**' \
