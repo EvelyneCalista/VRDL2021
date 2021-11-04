@@ -15,6 +15,7 @@ transformer into an attention map. This method was successfully distinguish 200 
 ## Usage
 1. Download Google Pre-trained ViT Models \
    The model can be downloaded in this [link](https://console.cloud.google.com/storage/browser/vit_models).
+   file: vit_models/imagenet21k+imagenet2012/ViT-L_16.npz
 
 2. Install required packages
       ```
