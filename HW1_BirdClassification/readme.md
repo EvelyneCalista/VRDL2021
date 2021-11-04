@@ -15,7 +15,7 @@ The specific model used in this experiment:
    - vit_models/imagenet21k : Vit-
 
 2. Get the data
-3. Install required packages
+4. Install required packages
 
 4. Train \
    Run: 
@@ -23,7 +23,7 @@ The specific model used in this experiment:
       bash train.sh
       ```
 6. Test 
-   - Get my trained model in this [link]()
+   - Get my best trained model in this [link](https://reurl.cc/q1oZbN)
    - Run: 
       ```
       bash inference.sh
