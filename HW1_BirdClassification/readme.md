@@ -28,17 +28,21 @@ transformer into an attention map. This method was successfully distinguish 200 
       ```
    by change some parameter
       ```
-      python -m torch.distributed.launch --nproc_per_node=1 inference.py \
-      --img_order 'data_file/testing_img_order.txt' \
-      --output 'answer-transFGv8_linear_Vitl32pre-20000e_batch6.txt' \
-      --annotation_file 'data_file/training_labels.txt' \
-      --img_testdir '/path_to_testing_images' \
-      --eval_batch_size 6 \
+     python -m torch.distributed.launch --nproc_per_node=1 train.py \
+      --name 'taskname' \
       --dataset 'myBirds' \
-      --trained_model '/path/to_trainedmodel' \
+      --data_root 'pathto/training_images' \
+      --model_type "ViT-L_16" \
+      --pretrained_dir "vitpretrainedmodel_path/imagenet21k+imagenet2012_ViT-L_16.npz" \
+      --output_dir "output" \
+      --train_batch_size 2 \
+      --eval_batch_size 2 \
       --local_rank 0 \
-      --pretrained_dir "vitpretrainedmodel_path/imagenet21k+imagenet2012_ViT-L_32.npz" \
-      --model_type "ViT-L_32"
+      --decay_type "linear" \
+      --fp16 \
+      --img_dir 'trainimage_path/training_images' \
+      --img_labels 'train.txt'  \
+      --img_val 'val.txt' 
       ```
 4. Test 
    - Get my best trained model in this [link](https://reurl.cc/q1oZbN)
@@ -50,15 +54,15 @@ transformer into an attention map. This method was successfully distinguish 200 
       ```
       python -m torch.distributed.launch --nproc_per_node=1 inference.py \
       --img_order 'data_file/testing_img_order.txt' \
-      --output 'data_file/answer-transFGv8_linear_Vitl32pre-20000e_batch6.txt' \
+      --output 'data_file/answer.txt' \
       --annotation_file 'data_file/training_labels.txt' \
       --img_testdir '/path_to_testing_images' \
-      --eval_batch_size 6 \
+      --eval_batch_size 2 \
       --dataset 'myBirds' \
-      --trained_model '/path/to_trainedmodel' \
+      --trained_model '/path/to_trainedmodel.bin' \
       --local_rank 0 \
-      --pretrained_dir "vitpretrainedmodel_path/imagenet21k+imagenet2012_ViT-L_32.npz" \
-      --model_type "ViT-L_32"
+      --pretrained_dir "vitpretrainedmodel_path/imagenet21k+imagenet2012_ViT-L_16.npz" \
+      --model_type "ViT-L_16"
       ```
   
 ## References
