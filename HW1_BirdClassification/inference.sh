@@ -1,11 +1,11 @@
 python -m torch.distributed.launch --nproc_per_node=1 inference.py \
---img_order 'testing_img_order.txt' \
---output 'answer.txt' \
---annotation_file 'training_labels.txt' \
+--img_order 'data_file/testing_img_order.txt' \
+--output 'data_file/answer.txt' \
+--annotation_file 'data_file/training_labels.txt' \
 --img_testdir '/path_to_testing_images' \
---eval_batch_size 6 \
+--eval_batch_size 2 \
 --dataset 'myBirds' \
---trained_model '/path/to_trainedmodel' \
+--trained_model '/path/to_trainedmodel.bin' \
 --local_rank 0 \
 --pretrained_dir "vitpretrainedmodel_path/imagenet21k+imagenet2012_ViT-L_16.npz" \
 --model_type "ViT-L_16"
