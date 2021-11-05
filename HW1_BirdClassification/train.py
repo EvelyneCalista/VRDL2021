@@ -370,7 +370,6 @@ def main():
     parser.add_argument('--img_dir', type=check_slash,required=True)
     parser.add_argument('--img_labels', type=check_slash,required=True)
     parser.add_argument('--img_val', type=check_slash,required=True)
-    parser.add_argument('--img_testdir', type=check_slash,required=True)
     args = parser.parse_args()
 
     # if args.fp16 and args.smoothing_value != 0:
