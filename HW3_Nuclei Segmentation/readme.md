@@ -1,6 +1,9 @@
 ## VRDL 2021 HW3 Nuclei Segmentation
-## Introduction
+
+## <div align="center">Introduction</div>
 **The code is use [Detectron2](https://github.com/facebookresearch/detectron2) for homework of VRDL-Fall 2021 class in NYCU.**
+The assignment was to do instance segmentation for nuclei segmentation. 14606 instances for nucleus category, in 24 images. For this assignment I use detectron2 with maskrcnn backbone ResNeXt-101-32x8d from coco instance segmentation config folder, where give the best result experiment. Detectron 2 is a library platform for object detection and segmentation algorithms from Facebook AI Research.
+
 ## <div align="center">Data Preprocessing</div>
 The provided dataset annotations are a mask images for each instances like below. Therefore we need to convert those mask by using createcustom.py
  ```bash
