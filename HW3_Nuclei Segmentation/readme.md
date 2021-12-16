@@ -29,6 +29,5 @@ The output would be 1 model weight file.
 
 The output would be 1 json file with coco format.
 
-</details>
 ## <div align="center">Reference</div>
 1. detectron2 [detectron2 Official Github](https://github.com/facebookresearch/detectron2) 
