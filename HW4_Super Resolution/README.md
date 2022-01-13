@@ -7,8 +7,6 @@ Lightweight Image Super-Resolution with Information Multi-distillation Network (
 
 ## Data preparation
 Training data
-
-.
  * [data](./data)
    * [training_data](./data/training_data)
      * [train_HR](./data/training_data/train_HR)
