@@ -5,6 +5,20 @@ Lightweight Image Super-Resolution with Information Multi-distillation Network (
 [[Poster]](https://github.com/Zheng222/IMDN/blob/master/images/acmmm19_poster.pdf)
 [[ACM DL]](https://dl.acm.org/citation.cfm?id=3351084)
 
+## Data preparation
+Training data
+
+.
+ * [data](./data)
+ * [training_data](./training_data)
+   * [train_HR](./training_data/train_HR)
+   * [train_LR](./training_data/train_LR)
+    * [X3](./training_data/train_LR/X3)
+ * [val_data](./val_data)
+   * [val_HR](./val_data/val_HR)
+   * [val_LR](./val_data/val_LR)
+    * [X3](./val_data/val_LR/X3)
+
 ## Testing
 Pytorch 1.1
 * Runing testing:
@@ -25,7 +39,7 @@ python train_IMDN.py --root /path/to/DIV2K_decoded/ --scale 3 --pretrained check
 python train_IMDN.py --root /path/to/DIV2K_decoded/ --scale 4 --pretrained checkpoints/IMDN_x4.pth
 ```
 
-
+# My weight can be downloaded in 
 ## Citation
 
 If you find IMDN useful in your research, please consider citing:
