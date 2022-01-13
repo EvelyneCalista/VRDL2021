@@ -37,10 +37,9 @@ python train_IMDN.py --root /path/to/DIV2K_decoded/ --scale 3 --pretrained check
 python train_IMDN.py --root /path/to/DIV2K_decoded/ --scale 4 --pretrained checkpoints/IMDN_x4.pth
 ```
 
-# My weight can be downloaded in 
+* My weight can be downloaded in *
 ## Citation
 
-If you find IMDN useful in your research, please consider citing:
 
 ```
 @inproceedings{Hui-IMDN-2019,
