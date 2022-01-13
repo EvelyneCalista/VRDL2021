@@ -10,15 +10,8 @@ Pytorch 1.1
 * Runing testing:
 ```bash
 # Set5 x2 IMDN
-python test_IMDN.py --test_hr_folder Test_Datasets/Set5/ --test_lr_folder Test_Datasets/Set5_LR/x2/ --output_folder results/Set5/x2 --checkpoint checkpoints/IMDN_x2.pth --upscale_factor 2
-# RealSR IMDN_AS
-python test_IMDN_AS.py --test_hr_folder Test_Datasets/RealSR/ValidationGT --test_lr_folder Test_Datasets/RealSR/ValidationLR/ --output_folder results/RealSR --checkpoint checkpoints/IMDN_AS.pth
+python test_IMDN.py --test_hr_folder Test_Datasets --test_lr_folder Test_Datasets --output_folder results --checkpoint checkpoints/IMDN_x3.pth --upscale_factor 3
 
-```
-* Calculating IMDN_RTC's FLOPs and parameters, input size is 240*360
-```bash
-python calc_FLOPs.py
-```
 
 ## Training
 * Convert png file to npy file
