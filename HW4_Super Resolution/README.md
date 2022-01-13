@@ -23,9 +23,10 @@ Pytorch 1.1
 ```bash
 # Set5 x2 IMDN
 python test_IMDN.py --test_hr_folder Test_Datasets --test_lr_folder Test_Datasets --output_folder results --checkpoint checkpoints/IMDN_x3.pth --upscale_factor 3
-
+```
 
 ## Training
+
 * Convert png file to npy file
 ```bash
 python scripts/png2npy.py --pathFrom /path/to/DIV2K/ --pathTo /path/to/DIV2K_decoded/
