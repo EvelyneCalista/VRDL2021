@@ -11,11 +11,11 @@ Training data
    * [training_data](./data/training_data)
      * [train_HR](./data/training_data/train_HR)
      * [train_LR](./data/training_data/train_LR)
-      * [X3](./data/training_data/train_LR/X3)
+        * [X3](./data/training_data/train_LR/X3)
    * [val_data](./data/val_data)
      * [val_HR](./data/val_data/val_HR)
      * [val_LR](./data/val_data/val_LR)
-      * [X3](./data/val_data/val_LR/X3)
+        * [X3](./data/val_data/val_LR/X3)
 
 ## Testing
 Pytorch 1.1
