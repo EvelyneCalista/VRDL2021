@@ -38,7 +38,7 @@ python train_IMDN.py --root /path/to/DIV2K_decoded/ --scale 3 --pretrained check
 python train_IMDN.py --root /path/to/DIV2K_decoded/ --scale 4 --pretrained checkpoints/IMDN_x4.pth
 ```
 
-* My weight can be downloaded in *
+* My weight can be downloaded in [here](https://drive.google.com/file/d/1lz8VuITD61yU_aDIXbOOP4USSkjwoWm5/view?usp=sharing)
 ## Citation
 
 
