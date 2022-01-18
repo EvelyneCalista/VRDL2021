@@ -19,7 +19,6 @@ from torchvision.datasets.utils import download_url, list_dir, check_integrity, 
 class myBirdsdataset():
     def __init__(self, img_labels, img_dir, transform = None, target_transform = None):
         super().__init__()
-        # self.img_labels = pd.read_csv(img_labels, header=None, sep =" ")
         self.img_labels = img_labels
         self.img_dir = img_dir
         self.transform = transform
@@ -33,11 +32,8 @@ class myBirdsdataset():
         
         image = Image.open(img_path)
         label = torch.tensor(self.img_labels.iloc[index,1])
-        # label = self.img_labels.iloc[index,2]
         if self.transform:
             image = self.transform(image)
-        # if self.target_transform:
-        #     label = self.target_transform(label)
         return image, label, img_path
 
     def __len__(self):
@@ -59,11 +55,8 @@ class myBirdsdataset_val():
         
         image = Image.open(img_path)
         label = torch.tensor(self.img_labels.iloc[index,1])
-        # label = self.img_labels.iloc[index,2]
         if self.transform:
             image = self.transform(image)
-        # if self.target_transform:
-        #     label = self.target_transform(label)
         return image, label, img_path
 
     def __len__(self):
@@ -85,8 +78,6 @@ class myBirdsdataset_test():
         image_name = self.img_order.iloc[index,0]
         if self.transform:
             image = self.transform(image)
-        # if self.target_transform:
-        #     label = self.target_transform(label)
         return image, image_name
 
     def __len__(self):
